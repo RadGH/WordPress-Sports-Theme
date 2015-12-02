@@ -21,14 +21,6 @@ if( !function_exists('acf_add_options_page') ) {
 acf_add_options_sub_page(array(
 	'parent' => 'options-general.php',
 
-	'page_title' => 'Social Media',
-	'menu_title' => 'Social Media',
-	'menu_slug' => 'theme-options-social',
-));
-
-acf_add_options_sub_page(array(
-	'parent' => 'options-general.php',
-
 	'page_title' => 'Tracking',
 	'menu_title' => 'Tracking',
 	'menu_slug' => 'theme-options-tracking',

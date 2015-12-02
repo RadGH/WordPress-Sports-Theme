@@ -1,0 +1,17 @@
+/* One column checkout page */
+.woocommerce .col2-set#customer_details .col-1, .woocommerce-page .col2-set#customer_details .col-1,
+.woocommerce .col2-set#customer_details .col-2, .woocommerce-page .col2-set#customer_details .col-2 {
+	width: auto;
+	float: none;
+}
+
+/* Order Received Payment Summary */
+.woocommerce .order_details {
+    padding: 0;
+}
+
+.woocommerce .order_details li {
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin: 0;
+}

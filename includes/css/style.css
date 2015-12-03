@@ -95,6 +95,7 @@ body {
 	color: #000000;
 	background-color: #ffffff;
 
+	font-family: "minion-pro", Garamond, Baskerville, "Times New Roman", serif;
 	font-size: 16px;
 	line-height: 22px;
 }
@@ -555,13 +556,17 @@ html.csstransforms #header.has-image .inside {
 h1.header-title {
 	color: #fff;
 	font-size: 150px;
-	line-height: 150px;
-	margin: 0 0 5px;
+	line-height: 1;
+	margin: 0;
 	font-family: "futura-pt-condensed", Futura, Arial, sans-serif;
 	font-weight: 700;
 	font-style: normal;
 	text-transform: uppercase;
 	text-align: center;
+}
+
+h1.header-title a {
+	display: block;
 }
 
 @media ( max-width: 1440px ) {
@@ -606,6 +611,97 @@ h1.header-title {
 	bottom: 0;
 	background: rgba(0,0,0,0.4);
 }
+
+
+/* Front page highlights */
+html.flexbox .highlight-section {
+	display: flex;
+	flex-direction: row;
+
+	margin: 0 0 60px;
+}
+
+html.no-flexbox .highlight-column {
+	float: left;
+}
+
+.highlight-content strong {
+	color: #556914;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.highlight-academic.highlight-column {
+	padding-right: 22px;
+	border-right: 2px solid #000;
+}
+
+.highlight-athletic.highlight-column {
+	padding-left: 22px;
+}
+
+.highlight-icon {
+	float: left;
+	margin-right: 20px;
+	position: relative;
+	top: 5px;
+}
+
+.highlight-content {
+	overflow: hidden;
+}
+
+.highlight-content p {
+	margin: 0 ;
+}
+
+.highlight-content ul,
+.highlight-content ul li {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.highlight-content ul {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.highlight-content ul li {
+}
+
+.highlight-content ul li:before {
+	content: '- ';
+}
+
+@media ( max-width: 800px ) {
+	html.flexbox .highlight-section {
+		display: block;
+		margin: 0 0 40px;
+	}
+
+	html.no-flexbox .highlight-column {
+		float: none;
+	}
+
+	.highlight-section .highlight-column {
+		margin: 0 0 20px;
+		border: none;
+		padding: 0;
+	}
+}
+
+@media ( max-width: 600px ) {
+	.highlight-icon {
+		display: none;
+	}
+
+	.highlight-section .highlight-column {
+		margin: 0 0 40px;
+	}
+}
+
 
 /* General layout styles */
 
@@ -967,10 +1063,12 @@ Navigation Menus
 }
 
 .nav-menu {
+	cursor: default;
 	color: #9ec53b;
 }
 
 .nav-menu a {
+	cursor: pointer;
 	color: #9ec53b;
 }
 
@@ -1044,6 +1142,10 @@ body.mobile_nav_open .nav-mobile a {
 	display: inline-block;
 }
 
+.nav-menu.nav-header a {
+	display: inline-block;
+	padding: 10px;
+}
 
 .nav-header.nav-primary li.depth-1:after {
 	content: ' | ';
@@ -1052,7 +1154,6 @@ body.mobile_nav_open .nav-mobile a {
 	top: -2px;
 
 	display: inline-block;
-	margin: 0 10px;
 
 	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;

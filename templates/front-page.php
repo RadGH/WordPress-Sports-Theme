@@ -33,24 +33,30 @@ get_header();
 							<?php } ?>
 
 							<?php
+							$academic_icon = get_field('highlights_academic_icon');
 							$academic_title = get_field('highlights_academic_title');
-							$academic = get_field('highlights_academic', get_the_ID(), false); // No formatting
-							$athletic_title = get_field('highlights_athletic_title');
-							$athletic = get_field('highlights_athletic', get_the_ID(), false); // No formatting
+							$academic_items = get_field('highlights_academic', get_the_ID(), false); // No formatting
 
-							if ( $academic || $athletic ) {
+							$athletic_icon = get_field('highlights_athletic_icon');
+							$athletic_title = get_field('highlights_athletic_title');
+							$athletic_items = get_field('highlights_athletic', get_the_ID(), false); // No formatting
+
+							if ( $academic_items || $athletic_items ) {
 								?>
 								<div class="highlight-section">
 									<?php
-									if ( $academic ) {
+									if ( $academic_items ) {
 										if ( !$academic_title ) $academic_title = 'Academic/Community Leadership';
-										$split = preg_split( '/(\r\n|\r|\n)+/', $academic );
+										$split = preg_split( '/(\r\n|\r|\n)+/', $academic_items );
 										?>
-										<div class="highlight-academic">
-											<div class="icon icon-book"></div>
+										<div class="highlight-academic highlight-column">
+											<?php if ( $academic_icon ) { ?>
+											<div class="highlight-icon"><img src="<?php echo esc_attr($academic_icon); ?>" alt="<?php echo esc_attr(smart_media_alt($academic_icon)); ?>"></div>
+											<?php } ?>
+
 											<div class="highlight-content">
 												<p><strong><?php echo esc_html($academic_title); ?></strong></p>
-												<ul class="ul-disc"><?php
+												<ul><?php
 													foreach($split as $line) {
 														$line = trim($line);
 														if ( !$line ) continue;
@@ -66,15 +72,18 @@ get_header();
 
 
 
-									if ( $athletic ) {
+									if ( $athletic_items ) {
 										if ( !$athletic_title ) $athletic_title = 'Athletic Accomplishments';
-										$split = preg_split( '/(\r\n|\r|\n)+/', $athletic );
+										$split = preg_split( '/(\r\n|\r|\n)+/', $athletic_items );
 										?>
-										<div class="highlight-academic">
-											<div class="icon icon-book"></div>
+										<div class="highlight-athletic highlight-column">
+											<?php if ( $athletic_icon ) { ?>
+												<div class="highlight-icon"><img src="<?php echo esc_attr($athletic_icon); ?>" alt="<?php echo esc_attr(smart_media_alt($athletic_icon)); ?>"></div>
+											<?php } ?>
+
 											<div class="highlight-content">
 												<p><strong><?php echo esc_html($athletic_title); ?></strong></p>
-												<ul class="ul-disc"><?php
+												<ul><?php
 													foreach($split as $line) {
 														$line = trim($line);
 														if ( !$line ) continue;

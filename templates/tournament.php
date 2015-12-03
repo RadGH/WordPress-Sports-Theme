@@ -36,42 +36,44 @@ get_header();
 
 							if ( $entries ) {
 								?>
-								<table class="tourney-table">
-									<thead>
-									<tr>
-										<th class="col-date"><span>Date</span></th>
-										<th class="col-tournament"><span>Tournament</span></th>
-										<th class="col-location"><span>Location</span></th>
-										<th class="col-yards"><span>Yards</span></th>
-										<th class="col-scores"><span>Scores</span></th>
-										<th class="col-finish"><span>Finish</span></th>
-									</tr>
-									</thead>
-									<tbody>
-									<?php
-									foreach( $entries as $entry ) {
-										if ( empty($entry) ) continue;
-
-										$date = $entry['date'];
-										$tournament = $entry['tournament'];
-										$location = $entry['location'];
-										$yards = $entry['yards'];
-										$scores = $entry['scores'];
-										$finish = $entry['finish'];
-										?>
+								<div class="tourney-table-container">
+									<table class="tourney-table">
+										<thead>
 										<tr>
-											<td class="col-date"><span><?php echo esc_html($date); ?></span></td>
-											<td class="col-tournament"><span><?php echo esc_html($tournament); ?></span></td>
-											<td class="col-location"><span><?php echo esc_html($location); ?></span></td>
-											<td class="col-yards"><span><?php echo esc_html($yards); ?></span></td>
-											<td class="col-scores"><span><?php echo esc_html($scores); ?></span></td>
-											<td class="col-finish"><span><?php echo esc_html($finish); ?></span></td>
+											<th class="col-date"><span>Date</span></th>
+											<th class="col-tournament"><span>Tournament</span></th>
+											<th class="col-location"><span>Location</span></th>
+											<th class="col-yards"><span>Yards</span></th>
+											<th class="col-scores"><span>Scores</span></th>
+											<th class="col-finish"><span>Finish</span></th>
 										</tr>
+										</thead>
+										<tbody>
 										<?php
-									}
-									?>
-									</tbody>
-								</table>
+										foreach( $entries as $entry ) {
+											if ( empty($entry) ) continue;
+
+											$date = $entry['date'];
+											$tournament = $entry['tournament'];
+											$location = $entry['location'];
+											$yards = $entry['yards'];
+											$scores = $entry['scores'];
+											$finish = $entry['finish'];
+											?>
+											<tr>
+												<td class="col-date"><span><?php echo esc_html($date); ?></span></td>
+												<td class="col-tournament"><span><?php echo esc_html($tournament); ?></span></td>
+												<td class="col-location"><span><?php echo esc_html($location); ?></span></td>
+												<td class="col-yards"><span><?php echo esc_html($yards); ?></span></td>
+												<td class="col-scores"><span><?php echo esc_html($scores); ?></span></td>
+												<td class="col-finish"><span><?php echo esc_html($finish); ?></span></td>
+											</tr>
+											<?php
+										}
+										?>
+										</tbody>
+									</table>
+								</div>
 								<?php
 							}
 							?>

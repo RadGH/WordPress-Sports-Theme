@@ -72,12 +72,15 @@ add_action( 'wp_enqueue_scripts', 'ld_enqueue_global_scripts', 25 );
 add_action( 'admin_enqueue_scripts', 'ld_enqueue_global_scripts', 25 );
 add_action( 'login_enqueue_scripts', 'ld_enqueue_global_scripts', 25 );
 
-
+// High Priority Front-end Includes
+function ld_enqueue_high_priority_theme_scripts() {
+	ld_enqueue_script( '/includes/libraries/modernizr/modernizr.min.js', array(), '3.0.0c' );
+}
+add_action( 'wp_enqueue_scripts', 'ld_enqueue_high_priority_theme_scripts', 2 );
 
 // Front-end includes
 function ld_enqueue_theme_scripts() {
 	// Third party files
-	ld_enqueue_script( '/includes/libraries/modernizr/modernizr.min.js', array(), '3.0.0c' );
 	ld_enqueue_script( '/includes/libraries/prefixfree/prefixfree.min.js', array(), '1.0.3' );
 	ld_enqueue_style(  '/includes/libraries/animate-css/animate.min.css', array(), '1.0.0' );
 	ld_enqueue_style(  '/includes/libraries/slick/slick.css', array(), '1.0.0' );

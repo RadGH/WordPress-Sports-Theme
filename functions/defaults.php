@@ -226,7 +226,7 @@ function ld_clean_visitor_warnings() {
 	if ( current_user_can( 'administrator' ) ) return;
 
 	// Everyone else can have output cleared
-	ob_clean();
+	@ob_clean();
 }
 add_action( 'get_header', 'ld_clean_visitor_warnings' );
 

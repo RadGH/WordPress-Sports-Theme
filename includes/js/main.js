@@ -10,12 +10,12 @@ jQuery(function() {
 });
 
 function init_swipebox() {
-	var $gallery = jQuery('.gallery-photos, .highlight-gallery');
-	if ( $gallery.length < 1 ) return;
-
-	$gallery.find('a').swipebox({
-		hideBarsDelay: 0
-	});
+	var $gallery = jQuery('.gallery-photos');
+	if ( $gallery.length ) {
+		$gallery.find('a').swipebox({
+			hideBarsDelay: 0
+		});
+	}
 }
 
 function init_scroll_tracking() {

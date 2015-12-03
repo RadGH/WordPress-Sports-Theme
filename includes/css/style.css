@@ -97,7 +97,7 @@ body {
 
 	font-family: "minion-pro", Garamond, Baskerville, "Times New Roman", serif;
 	font-size: 16px;
-	line-height: 22px;
+	line-height: 30px;
 }
 
 
@@ -353,6 +353,41 @@ body.woocommerce #woocommerce #payment div.place-order .button {
 html body.woocommerce #woocommerce input[type="submit"].checkout-button {
 	margin-top: 5px;
 	margin-right: 3px;
+}
+
+/* Tables */
+table {
+	width: 100%;
+}
+
+table thead th,
+table tfoot th {
+	font-size: 18px;
+	color: #556914;
+	text-transform: uppercase;
+}
+
+table th {
+	text-align: left;
+	font-weight: 700;
+}
+
+table th,
+table td {
+	padding: 4px 30px 4px 5px;
+}
+
+table th:last-child,
+table td:last-child {
+	padding-right: 5px;
+}
+
+table thead tr:first-child:last-child {
+	border-bottom: 1px solid #9ec53b;
+}
+
+table tbody tr:nth-child(odd) {
+	background: #FBFDF5;
 }
 
 /* ==========
@@ -700,6 +735,26 @@ html.no-flexbox .highlight-column {
 	.highlight-section .highlight-column {
 		margin: 0 0 40px;
 	}
+}
+
+/* Testimonial page */
+.testimonial-item {
+	padding-bottom: 40px;
+	border-bottom: 2px solid #e1e1e1;
+	margin-bottom: 40px;
+}
+
+.testimonial-item:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.testimonial-contact,
+.testimonial-author {
+	font-size: 18px;
+	line-height: 24px;
+	color: #556914;
+	font-weight: 700;
 }
 
 

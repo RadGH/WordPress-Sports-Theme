@@ -35,11 +35,6 @@ get_header();
 							<?php
 							$testimonials = get_field( 'testimonials' );
 
-							$testimonials[] = $testimonials[0];
-							$testimonials[] = $testimonials[0];
-							$testimonials[] = $testimonials[0];
-							$testimonials[] = $testimonials[0];
-
 							if ( $testimonials ) {
 								?>
 								<div class="testimonial-section">

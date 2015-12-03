@@ -34,22 +34,9 @@ get_header();
 							<?php
 							$entries = get_field( 'tournament_entries' );
 
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-							$entries[] = $entries[0];
-
 							if ( $entries ) {
 								?>
-								<table class="tourny-table">
+								<table class="tourney-table">
 									<thead>
 									<tr>
 										<th class="col-date"><span>Date</span></th>

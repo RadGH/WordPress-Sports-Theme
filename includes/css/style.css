@@ -882,7 +882,7 @@ body.front-page .loop-header h1 {
 .gallery-photos .gallery-item {
 	float: left;
 	width: 25%;
-	padding: 0 5px 5px;
+	padding: 0px;
 }
 
 .gallery-photos .gallery-item a {

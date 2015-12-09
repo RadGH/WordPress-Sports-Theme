@@ -36,7 +36,7 @@ get_header();
 
 							if ( $entries ) {
 								?>
-								<div class="tourney-table-container tourney-results">
+								<div class="tourney-table-container tourney-schedule">
 									<table class="tourney-table">
 										<thead>
 										<tr>

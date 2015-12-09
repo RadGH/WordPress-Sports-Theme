@@ -374,7 +374,7 @@ table th {
 
 table th,
 table td {
-	padding: 4px 30px 4px 5px;
+	padding: 4px 24px 4px 5px;
 }
 
 table th:last-child,
@@ -770,6 +770,26 @@ html.no-flexbox .highlight-column {
 	white-space: nowrap;
 }
 
+table tbody tr.tourney-heading {
+	background: #556914;
+
+	border-top: 30px solid #fff;
+
+	color: #fff;
+	font-family: "futura-pt-condensed", Futura, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+table tbody tr.tourney-heading:first-child {
+	border-top: none;
+}
+
+/* Schedule table */
+.tourney-table-container.tourney-schedule {
+	max-width: 720px;
+}
 
 /* General layout styles */
 

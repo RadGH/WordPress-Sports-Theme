@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Tournament Results
+Template Name: Schedule
 Template Description: Page with custom settings, requires Advanced Custom Fields
 */
 
@@ -36,16 +36,13 @@ get_header();
 
 							if ( $entries ) {
 								?>
-								<div class="tourney-table-container">
+								<div class="tourney-table-container tourney-results">
 									<table class="tourney-table">
 										<thead>
 										<tr>
 											<th class="col-date"><span>Date</span></th>
-											<th class="col-tournament"><span>Tournament</span></th>
+											<th class="col-tournament"><span>Tournament/Event</span></th>
 											<th class="col-location"><span>Location</span></th>
-											<th class="col-yards"><span>Yards</span></th>
-											<th class="col-scores"><span>Scores</span></th>
-											<th class="col-finish"><span>Finish</span></th>
 										</tr>
 										</thead>
 										<tbody>
@@ -56,20 +53,14 @@ get_header();
 											$date = $entry['date'];
 											$tournament = $entry['tournament'];
 											$location = $entry['location'];
-											$yards = $entry['yards'];
-											$scores = $entry['scores'];
-											$finish = $entry['finish'];
 
 											$header = false;
-											if ( $date && !trim($tournament) && !trim($location) && !trim($yards) && !trim($scores) && !trim($finish) ) $header = true;
+											if ( $date && !trim($tournament) && !trim($location) ) $header = true;
 											?>
 											<tr class="tourney-<?php echo $header ? 'heading' : 'row'; ?>">
 												<td class="col-date"><span><?php echo esc_html($date); ?></span></td>
 												<td class="col-tournament"><span><?php echo esc_html($tournament); ?></span></td>
 												<td class="col-location"><span><?php echo esc_html($location); ?></span></td>
-												<td class="col-yards"><span><?php echo esc_html($yards); ?></span></td>
-												<td class="col-scores"><span><?php echo esc_html($scores); ?></span></td>
-												<td class="col-finish"><span><?php echo esc_html($finish); ?></span></td>
 											</tr>
 											<?php
 										}

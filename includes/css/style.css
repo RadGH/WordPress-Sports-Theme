@@ -651,11 +651,13 @@ h1.header-title a {
 
 
 /* Front page highlights */
+.highlight-section {
+	margin: 0 0 60px;
+}
+
 html.flexbox .highlight-section {
 	display: flex;
 	flex-direction: row;
-
-	margin: 0 0 60px;
 }
 
 html.no-flexbox .highlight-column {

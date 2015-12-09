@@ -43,7 +43,7 @@ get_header();
 
 							if ( $academic_items || $athletic_items ) {
 								?>
-								<div class="highlight-section">
+								<div class="highlight-section clearfix">
 									<?php
 									if ( $academic_items ) {
 										if ( !$academic_title ) $academic_title = 'Academic/Community Leadership';

@@ -907,6 +907,27 @@ body.front-page .loop-header h1 {
 	transform: scale(1.1);
 }
 
+/* Better zoom visual if your  browser supports csstranslate */
+html.csstransforms .gallery-photos .gallery-item a {
+	position: relative;
+	padding-top: 100%;
+}
+
+html.csstransforms .gallery-photos .gallery-item a img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 115%;
+
+	transition: all 400ms;
+}
+
+html.csstransforms .gallery-photos .gallery-item a:hover img {
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+}
+
 @media ( max-width: 875px ) {
 	.gallery-photos .gallery-item {
 		width: 33%;
